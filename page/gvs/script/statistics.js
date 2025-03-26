@@ -16,15 +16,7 @@ statistics.innerHTML = `${have} / ${GVSiHaveTest.length}`;
 // Постройка блоков
 let cluster = document.getElementById('cluster');
 
-for (u = 0; u < GVSiHaveTest.length; u++) {
-    cluster.innerHTML += `
-		<a class="card" href="img/gvs/${GVSiHaveTest[u].NUMB}r.jpg">
-			<img src="img/gvs/${GVSiHaveTest[u].NUMB}r.jpg" >
-		</a>
-`
-}
-
-
+card();
 
 // проссмотр (список)
 function list() {
@@ -42,15 +34,25 @@ function list() {
     }
 };
 
-// проссмотр (список)
+// проссмотр (плитки)
 function card() {
     cluster.innerHTML = "";
     cluster.className = "cards";
     for (u = 0; u < GVSiHaveTest.length; u++) {
         cluster.innerHTML += `
-		<a class="card" href="img/gvs/${GVSiHaveTest[u].NUMB}r.jpg">
+		<div class="card">
 			<img src="img/gvs/${GVSiHaveTest[u].NUMB}r.jpg" >
-		</a>
+			${ihave(GVSiHaveTest[u].HAVE)}
+		</div>
 `
     }
 };
+
+//
+function ihave(m) {
+    if (m) {
+		return `<div class="have" style="font-size: 32px">&check;</div>`
+    } else {
+		return ' '
+	}
+}

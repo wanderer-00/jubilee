@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Моя коллекция ГВС</title>
-    <link rel="stylesheet" href="../../style/style.css">
-    <link rel="stylesheet" href="style/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Моя коллекция ГВС</title>
+	<link rel="stylesheet" href="../../style/style.css">
+	<link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-    <header>
-        <div class="wrapper">
-            <h1>Города воинской славы</h1>
-            <div id="statistics"></div>
-        </div>
-        <hr>
-        <div class="wrapper">
-            <button onclick="list()">список</button>
-            <button onclick="card()">плитки</button>
-        </div>
-        <hr>
-    </header>
-    <main>
-        <div class="wrapper">
-            <div id="cluster" class="cards"></div>
-        </div>
-    </main>
-    <footer>
-        <div class="wrapper"></div>
-    </footer>
+	<header>
+		<div class="wrapper">
+			<h1>Города воинской славы</h1>
+			<div id="statistics"></div>
+		</div>
+		<hr>
+		<div class="wrapper">
+			<button onclick="list()">список</button>
+			<button onclick="card()">плитки</button>
+		</div>
+		<hr>
+		<fieldset>
+			<legend>Сортировка</legend>
+
+			<div>
+				<input type="radio" id="huey" name="drone" value="huey" />
+				<label for="huey">В наличии</label>
+			</div>
+
+			<div>
+				<input type="radio" id="dewey" name="drone" value="dewey" />
+				<label for="dewey">По алфавиту</label>
+			</div>
+
+			<div>
+				<input type="radio" id="louie" name="drone" value="louie" checked />
+				<label for="louie">По дате</label>
+			</div>
+		</fieldset>
+	</header>
+
+	<main>
+		<div class="wrapper">
+			<div id="cluster" class="cards"></div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="wrapper"></div>
+	</footer>
 </body>
 
 <!-- BD -->

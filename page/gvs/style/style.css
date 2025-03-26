@@ -19,6 +19,7 @@ header>.wrapper:first-child>* {font-size: 32px}
     flex-wrap: wrap;
 }
 .card {
+	position: relative;
     width: 140px;
 }
 
@@ -33,4 +34,10 @@ header>.wrapper:first-child>* {font-size: 32px}
     grid-template-columns: 60px 1fr auto auto;
     grid-gap: 1rem;
     align-items: center;
+}
+
+.have {
+	top: 0;
+	right: 0;
+	position: absolute;
 }
