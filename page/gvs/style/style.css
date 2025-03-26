@@ -1,21 +1,36 @@
-header>.wrapper {
+header>div:first-child {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
 }
-header>.wrapper>* {font-size: 32px}
+header>.wrapper:first-child>* {font-size: 32px}
 
-#cluster {
+/* монетки */
+#cluster img {
+    width: 100%;
+}
+
+
+/*  */
+.cards {
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
-
-#cluster>div {
-    display: flex;
-}
-
-#cluster img {
+.card {
     width: 140px;
+}
+
+
+.lists {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 60px 1fr auto auto;
+    grid-gap: 1rem;
+    align-items: center;
 }
