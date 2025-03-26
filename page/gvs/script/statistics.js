@@ -1,24 +1,25 @@
 let statistics = document.getElementById('statistics');
 
+// владею кол-во монет
 let have = 0;
 
-for(i=0; i<GVSiHave.length; i++){
-    if(GVSiHave[i][1]){
+for(i=0; i<GVSiHaveTest.length; i++){
+    if(GVSiHaveTest[i].HAVE){
         have++;
-        console.log(GVSiHave[i][0])
+        console.log(GVSiHaveTest[i].NAME)
     }
-}
+};
+statistics.innerHTML = `${have} / ${GVSiHaveTest.length}`;
 
-// имею/всего
-statistics.innerHTML = `${have} / ${GVSiHave.length}`;
 
-// imgs
+
+// Постройка блоков
 let cluster = document.getElementById('cluster');
 
 for(u=0; u<55; u++){
 	cluster.innerHTML += `
 		<div>
-			<img src="img/gvs/5714-00${u}r.jpg" width="100px" height="100px">
+			<img src="img/gvs/${GVSiHaveTest[u].NUMB}r.jpg" >
 		</div>
 `
 }

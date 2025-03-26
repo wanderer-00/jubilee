@@ -1,0 +1,21 @@
+header>.wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+header>.wrapper>* {    font-size: 32px;}
+
+#cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#cluster>div {
+    display: flex;
+}
+
+#cluster img {
+    width: 140px;
+}
