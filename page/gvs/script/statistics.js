@@ -18,8 +18,8 @@ let cluster = document.getElementById('cluster');
 
 for(u=0; u<55; u++){
 	cluster.innerHTML += `
-		<div>
+		<a href="img/gvs/${GVSiHaveTest[u].NUMB}r.jpg">
 			<img src="img/gvs/${GVSiHaveTest[u].NUMB}r.jpg" >
-		</div>
+		</a>
 `
 }

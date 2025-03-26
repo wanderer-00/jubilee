@@ -3,7 +3,7 @@ header>.wrapper {
     grid-template-columns: 1fr auto;
     align-items: center;
 }
-header>.wrapper>* {    font-size: 32px;}
+header>.wrapper>* {font-size: 32px}
 
 #cluster {
     display: flex;
