@@ -1,3 +1,7 @@
+:root {
+    --color: bisque;
+}
+
 header>div:first-child {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -10,12 +14,16 @@ header>.wrapper:first-child>* {font-size: 32px}
     width: 100%;
 }
 /************************************************/
+.control {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
 /* режим просмотра */
 button {
     border: none;
     background-color: transparent;
     border: 1px solid gray;
-    padding: 0.4rem;
+    padding: 0.3rem;
     overflow: hidden;
     cursor: pointer;
     &:first-child {
@@ -27,12 +35,12 @@ button {
         background-color: lightcyan;
     }
     &>img {
-        height: 32px;
+        height: 24px;
         vertical-align:bottom;
     }
 }
 .viewing_active {
-    background-color:bisque;
+    background-color: var(--color);
 }
 
 /************************************************/
@@ -44,26 +52,19 @@ input[type=radio]{
     opacity: 0;
 }
 input:checked + label {
-    color: green;
-    border:1px solid red;
+    background-color: bisque;
 /*    fill: var(--main-color);*/
 }
-
-.checkbox_radio > div {
-    display: grid;
-    grid-gap: 10px;
+.checkbox_radio {
+    display: flex;
+    gap: 0.2rem;
 }
 
 .checkbox_radio label {
-    
-    display: block;
-    padding: 12px;
-    text-align: center;
-    place-content: center;
-    white-space: nowrap;
-    color: var(--color);
+    display: flex;
+    padding: 0.3rem;
     border-radius: 4px;
-    border: 1px solid blue;
+    border: 1px solid gray;
     cursor: pointer;
     font-size: 1rem;
 }
@@ -78,13 +79,10 @@ input:checked + label {
 	position: relative;
     width: 140px;
 }
-
-
 .lists {
     display: grid;
     grid-gap: 1rem;
 }
-
 .list {
     display: grid;
     grid-template-columns: 60px 1fr auto auto;
@@ -93,9 +91,12 @@ input:checked + label {
 }
 /************************************************/
 .have {
-	top: 0;
-	right: 0;
+    color: darkcyan;
 	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 64px;
 }
 /************************************************/
 @media (width: 1366px) {

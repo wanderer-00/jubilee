@@ -1,33 +1,38 @@
 let statistics = document.getElementById('statistics');
+let cluster = document.getElementById('cluster');
 
-// владею кол-во монет
+
+
+// статистика общего кол-ва монет и имеющегося
 let have = 0;
 
 for (i = 0; i < GVSiHaveTest.length; i++) {
-    if (GVSiHaveTest[i].HAVE) {
-        have++;
-        console.log(GVSiHaveTest[i].NAME)
-    }
+    if (GVSiHaveTest[i].HAVE) {have++}
 };
 statistics.innerHTML = `${have} / ${GVSiHaveTest.length}`;
 
 
 
-// Постройка блоков
-let cluster = document.getElementById('cluster');
-
-// первоначально список ввиде плиток
+// первичная подготовка
+let button_card = document.getElementById('button_card');
+let button_list = document.getElementById('button_list');
+// выделение кнопки режима проссмотра "плитка"
+button_card.className = 'viewing_active';
+// постройка карточек с монетами
 card();
 
 
 
 // проссмотр (список)
 function list() {
-    cluster.innerHTML = "";
-    cluster.className = "lists";
+    cluster.innerHTML = ""; // удаление монет
+    cluster.className = "lists"; // смена отрисовки на режим "список"
+    button_card.className = ''; // снятие выделения кнопки режима проссмотра "плитка"
+    button_list.className = 'viewing_active'; // выделение кнопки режима проссмотра "список"
+    // отрисовка монет
     for (u = 0; u < GVSiHaveTest.length; u++) {
         cluster.innerHTML += `
-		<div class="list" href="img/gvs/${GVSiHaveTest[u].NUMB}r.jpg">
+		<div class="list">
 			<img src="img/gvs/${GVSiHaveTest[u].NUMB}r.jpg">
             <div>${GVSiHaveTest[u].NAME}</div>
             <div>${GVSiHaveTest[u].NUMB}</div>
@@ -37,12 +42,13 @@ function list() {
     }
 };
 
-
-
 // проссмотр (плитки)
 function card() {
-    cluster.innerHTML = "";
-    cluster.className = "cards";
+    cluster.innerHTML = ""; // удаление монет
+    cluster.className = "cards"; // смена отрисовки на режим "плитки"
+    button_list.className = ''; // снятие выделения кнопки режима проссмотра "список"
+    button_card.className = 'viewing_active'; // выделение кнопки режима проссмотра "плитка"
+    // отрисовка монет
     for (u = 0; u < GVSiHaveTest.length; u++) {
         cluster.innerHTML += `
 		<div class="card">
@@ -58,7 +64,7 @@ function card() {
 // отметка на имеющиеся монеты
 function ihave(m) {
     if (m) {
-		return `<div class="have" style="font-size: 32px">&check;</div>`
+		return `<div class="have">&check;</div>`
     } else {
 		return ' '
 	}

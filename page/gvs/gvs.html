@@ -13,33 +13,36 @@
         <div class="wrapper">
             <h1>Города воинской славы</h1>
             <div id="statistics"></div>
+        </div>
+        <div class="wrapper control">
             <div>
-                <button onclick="list()">
-                    <img src="icon/list.svg">
-                </button><button onclick="card()">
+                <button
+                    onclick="card()"
+                    id="button_card">
                     <img src="icon/card.svg">
+                </button><button
+                    onclick="list()"
+                    id="button_list">
+                    <img src="icon/list.svg">
                 </button>
             </div>
-        </div>
-        <div class="wrapper">
-            <fieldset>
-                <div>
-                    <input type="radio" id="A1" name="A" checked>
-                    <label for="A1">
-                        <img src="icon/123.svg" alt="">
-                    </label>
 
-                    <input type="radio" id="A2" name="A">
-                    <label for="A2">
-                        <img src="icon/abc.svg" alt="">
-                    </label>
+            <div class="checkbox_radio">
+                <input type="radio" id="A1" name="A" checked>
+                <label for="A1">
+                    <img src="icon/123.svg">
+                </label>
 
-                    <input type="radio" id="A3" name="A">
-                    <label for="A3">
-                        <img src="icon/time.svg" alt="">
-                    </label>
-                </div>
-            </fieldset>
+                <input type="radio" id="A2" name="A">
+                <label for="A2">
+                    <img src="icon/abc.svg">
+                </label>
+
+                <input type="radio" id="A3" name="A">
+                <label for="A3">
+                    <img src="icon/time.svg">
+                </label>
+            </div>
         </div>
     </header>
 
