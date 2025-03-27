@@ -1,67 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Моя коллекция ГВС</title>
-	<link rel="stylesheet" href="../../style/style.css">
-	<link rel="stylesheet" href="style/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Моя коллекция ГВС</title>
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-	<header>
-		<div class="wrapper">
-			<h1>Города воинской славы</h1>
-			<div id="statistics"></div>
-		</div>
-		<hr>
-		<div class="wrapper">
-			<button onclick="list()">
-			    <img src="icon/list.svg" alt="">
-			</button>
-			<button onclick="card()" class="viewing_active">
-			    <img src="icon/card.svg" alt="">
-			</button>
-		</div>
-		<hr>
-		
-		<div class="wrapper">
+    <header>
+        <div class="wrapper">
+            <h1>Города воинской славы</h1>
+            <div id="statistics"></div>
+            <div>
+                <button onclick="list()">
+                    <img src="icon/list.svg">
+                </button><button onclick="card()">
+                    <img src="icon/card.svg">
+                </button>
+            </div>
+        </div>
+        <div class="wrapper">
             <fieldset>
-                <legend>Сортировка</legend>
-
                 <div>
-                    <input type="radio" id="huey" name="drone" value="huey" />
-                    <label for="huey">
-                        <img src="icon/abc.svg" alt="">
-                    </label>
-                </div>
-
-                <div>
-                    <input type="radio" id="dewey" name="drone" value="dewey" />
-                    <label for="dewey">
+                    <input type="radio" id="A1" name="A" checked>
+                    <label for="A1">
                         <img src="icon/123.svg" alt="">
                     </label>
-                </div>
 
-                <div>
-                    <input type="radio" id="louie" name="drone" value="louie" checked />
-                    <label for="louie">
+                    <input type="radio" id="A2" name="A">
+                    <label for="A2">
+                        <img src="icon/abc.svg" alt="">
+                    </label>
+
+                    <input type="radio" id="A3" name="A">
+                    <label for="A3">
                         <img src="icon/time.svg" alt="">
                     </label>
                 </div>
             </fieldset>
-		</div>
-	</header>
+        </div>
+    </header>
 
-	<main>
-		<div class="wrapper">
-			<div id="cluster" class="cards"></div>
-		</div>
-	</main>
+    <main>
+        <div class="wrapper">
+            <div id="cluster" class="cards"></div>
+        </div>
+    </main>
 
-	<footer>
-		<div class="wrapper"></div>
-	</footer>
+    <footer>
+        <div class="wrapper"></div>
+    </footer>
 </body>
 
 <!-- BD -->
