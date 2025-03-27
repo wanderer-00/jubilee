@@ -72,7 +72,7 @@ input:checked + label {
 .cards {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .card {
@@ -86,7 +86,7 @@ input:checked + label {
 .list {
     display: grid;
     grid-template-columns: 60px 1fr auto auto;
-    grid-gap: 1rem;
+    grid-gap: 1rem 5rem;
     align-items: center;
 }
 /************************************************/

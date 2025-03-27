@@ -25,10 +25,16 @@ card();
 
 // проссмотр (список)
 function list() {
-    cluster.innerHTML = ""; // удаление монет
     cluster.className = "lists"; // смена отрисовки на режим "список"
     button_card.className = ''; // снятие выделения кнопки режима проссмотра "плитка"
     button_list.className = 'viewing_active'; // выделение кнопки режима проссмотра "список"
+    cluster.innerHTML = `
+    <div class="list" style="font-size: 20px;">
+        <div>Иконка</div>
+        <div>Название</div>
+        <div>Номер</div>
+        <div>Выпуск</div>
+    </div>`;
     // отрисовка монет
     for (u = 0; u < GVSiHaveTest.length; u++) {
         cluster.innerHTML += `
