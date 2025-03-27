@@ -16,7 +16,10 @@ statistics.innerHTML = `${have} / ${GVSiHaveTest.length}`;
 // Постройка блоков
 let cluster = document.getElementById('cluster');
 
+// первоначально список ввиде плиток
 card();
+
+
 
 // проссмотр (список)
 function list() {
@@ -34,6 +37,8 @@ function list() {
     }
 };
 
+
+
 // проссмотр (плитки)
 function card() {
     cluster.innerHTML = "";
@@ -48,7 +53,9 @@ function card() {
     }
 };
 
-//
+
+
+// отметка на имеющиеся монеты
 function ihave(m) {
     if (m) {
 		return `<div class="have" style="font-size: 32px">&check;</div>`
