@@ -88,13 +88,13 @@ var GVSiHaveTest = [
         "NAME": "Белозерск",
         "DATE": "01.06.2012",
         "NUMB": "5514-0079",
-        "HAVE": false
+        "HAVE": true
     },
     {
         "NAME": "Елец",
         "DATE": "01.03.2011",
         "NUMB": "5514-0075",
-        "HAVE": false
+        "HAVE": true
     },
     {
         "NAME": "Соликамск",
