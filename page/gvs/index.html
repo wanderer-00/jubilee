@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Моя коллекция ГВС</title>
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>Города воинской славы</h1>
+            <div id="statistics"></div>
+        </div>
+        <div class="wrapper control">
+            <div>
+                <button
+                    onclick="card()"
+                    id="button_card">
+                    <img src="../icon/card.svg">
+                </button><button
+                    onclick="list()"
+                    id="button_list">
+                    <img src="../icon/list.svg">
+                </button>
+            </div>
+
+            <div class="checkbox_radio">
+                <input type="radio" id="A1" name="A" checked>
+                <label for="A1" title="Сортировка по номеру монеты">
+                    <img src="../icon/123.svg">
+                </label>
+
+                <input type="radio" id="A2" name="A">
+                <label for="A2" title="Сортировка в алфавитном порядке названия городов на монете">
+                    <img src="../icon/abc.svg">
+                </label>
+
+                <input type="radio" id="A3" name="A">
+                <label for="A3" title="Сортировка по дате выпуска монеты">
+                    <img src="../icon/time.svg">
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div id="cluster" class="cards"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="wrapper"></div>
+    </footer>
+</body>
+
+<!-- BD -->
+<script src="data/gvs_i_have.js"></script>
+<script src="data/test.js"></script>
+
+<!-- статистика коллекции ГВС -->
+<script src="script/statistics.js"></script></html>
