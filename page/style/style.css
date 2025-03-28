@@ -16,6 +16,7 @@ header>.wrapper:first-child>* {font-size: 32px}
 /************************************************/
 .control {
     display: grid;
+    padding: 1rem;
     grid-template-columns: 1fr auto;
 }
 /* режим просмотра */
