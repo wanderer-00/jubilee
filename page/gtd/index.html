@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="../..//favicon.ico">
-    <title>Моя коллекция ДГР</title>
+    <title>Города трудовой доблести</title>
     <link rel="stylesheet" href="../../style/style.css">
     <link rel="stylesheet" href="../style/style.css">
 </head>
@@ -12,22 +12,26 @@
 <body>
     <header>
         <div class="wrapper">
-            <h1>Древние города России</h1>
+            <h1>Города трудовой доблести</h1>
             <div id="statistics"></div>
         </div>
         <div class="wrapper control">
+            <!-- режим просмотра -->
             <div>
-                <button
-                    onclick="card()"
-                    id="button_card">
+                <button onclick="card()" id="button_card">
                     <img src="../icon/card.svg">
-                </button><button
-                    onclick="list()"
-                    id="button_list">
+                </button><button onclick="list()" id="button_list">
                     <img src="../icon/list.svg">
                 </button>
             </div>
 
+            <!-- размер карточек -->
+            <div class="card_size">
+                <label for="card_size">140</label>
+                <input type="range" id="card_size" name="card_size" min="40" value="140" max="200" step="10" />
+            </div>
+
+            <!-- режим сортировки -->
             <div class="checkbox_radio">
                 <input type="radio" id="A1" name="A" checked>
                 <label for="A1" title="Сортировка по номеру монеты">
@@ -59,8 +63,7 @@
 </body>
 
 <!-- BD -->
-<script src="data/gvs_i_have.js"></script>
 <script src="data/test.js"></script>
 
-<!-- статистика коллекции ГВС -->
+<!-- статистика коллекции -->
 <script src="script/statistics.js"></script></html>
