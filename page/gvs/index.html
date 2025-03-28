@@ -15,6 +15,7 @@
             <div id="statistics"></div>
         </div>
         <div class="wrapper control">
+            <!-- режим просмотра -->
             <div>
                 <button
                     onclick="card()"
@@ -26,7 +27,22 @@
                     <img src="../icon/list.svg">
                 </button>
             </div>
-
+            
+            <!-- размер карточек -->
+            <div class="card_size">
+                <label for="card_size">140</label>
+                <input
+                type="range"
+                id="card_size"
+                name="card_size"
+                min="40"
+                value="140"
+                max="200"
+                step="10"
+                />
+            </div>
+            
+            <!-- режим сортировки -->
             <div class="checkbox_radio">
                 <input type="radio" id="A1" name="A" checked>
                 <label for="A1" title="Сортировка по номеру монеты">

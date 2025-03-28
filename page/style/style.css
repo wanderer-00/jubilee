@@ -17,8 +17,18 @@ header>.wrapper:first-child>* {font-size: 32px}
 .control {
     display: grid;
     padding: 1rem;
-    grid-template-columns: 1fr auto;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr auto auto;
 }
+
+.control>div {
+    display: flex;
+    align-items: center;
+}
+
+/* размер карточек */
+.card_size {}
+
 /* режим просмотра */
 button {
     border: none;
@@ -77,8 +87,8 @@ input:checked + label {
     flex-wrap: wrap;
 }
 .card {
-	position: relative;
     width: 140px;
+	position: relative;
 }
 .lists {
     display: grid;
